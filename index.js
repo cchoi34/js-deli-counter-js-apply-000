@@ -1,15 +1,20 @@
 // initialize an empty array representing the current line
 
 var ourDeliLine = [];
-
+var number = 1;
 
 // create a function takeANumber, returning a person's position in line
 
-function takeANumber(ourDeliLine, newPerson) {
-  ourDeliLine.push(newPerson);
-  let positionInLine = ourDeliLine.indexOf(newPerson) + 1;
-  let greeting = `Welcome, ${newPerson}. You are number ${positionInLine} in line.`;
+function takeANumber(ourDeliLine) {
+  ourDeliLine.push(number);
+  number++;
+  let greeting = `Welcome, You are number ${number - 1}`;
   return greeting;
+}
+
+function endOfDay(ourDeliLine) {
+  number = 1;
+  return "Day Complete";
 }
 
 
